@@ -1,0 +1,11 @@
+ @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+  .hero-bg-color {
+    @apply bg-gradient-to-b from-blue-600/90 to-white  dark:from-blue-900 dark:to-white;
+  }
+}
+
