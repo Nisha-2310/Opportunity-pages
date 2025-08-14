@@ -55,12 +55,17 @@ const Hero = () => {
     pauseOnFocus: true,
   };
   return (
-    <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] bg-gradient-to-r from-blue-800 to-purple-500 flex justify-center items-center dark:from-blue-900 dark:to-purple-900 dark:bg-gradient-to-l duration-200">
+    <div  id="hero" className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] bg-gradient-to-r from-blue-800 to-purple-500 flex justify-center items-center dark:from-blue-900 dark:to-purple-900 dark:bg-gradient-to-l duration-200">
+      
       {/* background pattern  */}
 
       <div className="h-[700px] w-[700px] bg-gradient-to-t from-blue-800 to-purple-500  absolute -top-1/2 right-0 rounded-3xl rotate-45 -z[8]"></div>
 
+
+     
+
       {/* hero section  */}
+
 
       <div className="container pb-8 sm:pb-0">
         <Slider {...settings}>

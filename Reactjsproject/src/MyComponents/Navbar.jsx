@@ -13,12 +13,12 @@ const Menu = [
   {
     id: 1,
     name: "Home",
-    link: "/#",
+    link: "/#Hero",
   },
   {
     id: 2,
-    name: "About",
-    link: "/#",
+    name: "Opportunity",
+    link: "/#RecentOpp",
   },
 ];
 
@@ -32,8 +32,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className="shadow-lg bg-gradient-to-r from-blue-800 to-sky-400 text-white dark:bg-blue-900 dark:text-white duration-200">
-      <div className="container py-3 sm:py-0">
+    <div className="shadow-lg bg-gradient-to-r from-blue-800 to-purple-700 text-white dark:bg-blue-900 dark:text-white duration-200 flex flex-wrap items-center justify-between p-4 bg-blue-600  ">
+      <div className=" container mx-auto flex flex-wrap   p-4">
         <div className="flex justify-between items-center flex-wrap gap-4">
           {/* Left Section: Location Selector + Search */}
           <div className="flex flex-col items-start gap-2">
@@ -41,7 +41,7 @@ const Navbar = () => {
             <div className="relative">
               <button
                 onClick={() => setLocationOpen(!locationOpen)}
-                className="flex items-center gap-2 text-black bg-[rgba(255,255,255,0.1)] backdrop-blur-md px-4 py-2 rounded-md border border-white/30 hover:bg-blue-600 hover:text-white transition"
+                className="flex items-center gap-2 text-black bg-white/10 backdrop-blur-md px-3 py-2 rounded-md border border-white/30 hover:bg-blue-600 hover:text-white transition"
               >
                 <CiLocationOn className="text-xl" />
                 {selectedLocation}
@@ -91,24 +91,26 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-between gap-4">
+         
+              
+          <div className="flex items-center justify-between gap-5">
           
             <ul className="flex item-center gap-4  sm:flex">
              {Menu.map((menu) => (
-                <li>
+                <li key={menu.id}>
                   <a
                     href={menu.link}
-                    className="inline-block py-4 px-4 text-lg sm:text-xl font-medium hover:text-primary duration-200"
+                    className="text-lg sm:text-xl font-medium hover:text-2xl hover:text-blue-900 duration-200"
                   >
                     {menu.name}
                   </a>
                 </li>
               ))}
               {/* dropdown section */}
-              <li className="group re;ative cursor-pointer">
+              <li className="group relative cursor-pointer">
                 <a
                   href="/#"
-                  className="flex h-[72px] items-center gap-[2px] text-lg sm:text-xl font-medium"
+                  className="flex items-center gap-[2px] text-lg sm:text-xl font-medium"
                 >
                   Quick links
                   <span>
@@ -138,7 +140,7 @@ const Navbar = () => {
             </button>
     
             <div>
-             <DarkMode />
+             <DarkMode/>
             </div>
             <ul>
             <li className="ml-auto">
